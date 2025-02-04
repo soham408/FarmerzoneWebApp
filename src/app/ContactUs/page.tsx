@@ -6,6 +6,7 @@ import { cn } from '@/utils/cn';
 import { motion } from "framer-motion";
 import { HeroHighlight } from "@/components/hero-highlight";
 import { Client, Databases } from 'appwrite';
+import { Meteors } from "@/components/ui/meteors";
 
 const client = new Client();
 client
@@ -38,6 +39,13 @@ function Page() {
         'unique()',
         formData
       );
+
+      // Clear the form fields after successful submission
+      setFormData({
+        name: '',
+        ContactNumber: '',
+        EmailAddress: '',
+      });
       console.log('Document created successfully', response);
     } catch (error) {
       console.error('Error creating document', error);
@@ -85,6 +93,7 @@ function Page() {
                 Submit &rarr;
               </button>
             </form>
+            <Meteors number={20} />
           </div>
         </div>
       </motion.h1>

@@ -31,8 +31,8 @@ const cardData = [
 export default function ThreeDCard() {
   return (
     <div>
-    <h1 className="pt-[340px] text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto">Our Projects</h1>
-    <div className="flex flex-wrap justify-center gap-4 pt-[100px]">
+    <h1 className="pt-[150px] pb-[2px] text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto">Our Projects</h1>
+    <div className="flex flex-wrap justify-center gap-[2px] pt-[100px]">
       {cardData.map((card, index) => (
         <CardContainer key={index} className="inter-var w-full sm:w-[30rem]">
           <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-6 border">
